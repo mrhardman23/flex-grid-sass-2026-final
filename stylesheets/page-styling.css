@@ -68,6 +68,39 @@ main header {
   margin: 0;
 }
 
+@media (min-width: 850px) {
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    width: 15%;
+    float: left;
+
+    flex: 1 0 215px;
+  }
+
+  nav ul li a {
+    transition: background-color ease-in-out 0.5s;
+  }
+
+  nav ul li a:hover,
+  nav ul li a:focus {
+    background-color: #121212;
+  }
+}
+
+@media (min-width: 1500px) {
+  nav ul li a {
+    border-right: 3px solid #121212;
+  }
+
+  #contact {
+    border: 0;
+  }
+}
+
 /* 
   Styles every element with the font family of using Verdana first.
   Then, if Verdana cannot be used, Geneva is used. Next, if Verdana and Geneva
