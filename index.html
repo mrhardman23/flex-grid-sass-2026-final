@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex | Advanced CSS</title>
+    <link rel="stylesheet" href="stylesheets/page-styling.css" />
+    <style>
+      /* 
+        New version of internal styling by designing for mobile first.
+      */
+
+      section {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        flex-direction: column-reverse;
+
+        gap: 0 8rem;
+      }
+
+      section img {
+        width: 100%;
+      }
+
+      /*
+        Media query to change styling when window size is at least 850px. 
+      */
+      @media (min-width: 850px) {
+        section {
+          flex-direction: row;
+        }
+
+        section div {
+          flex: 2 0;
+        }
+
+        section img {
+          flex: 3 0;
+
+          width: 100%;
+        }
+      }
+
+      /*
+        Media query to change styling when window size is at least 1500px. 
+      */
+      @media (min-width: 1500px) {
+        section div {
+          flex: 1 0;
+        }
+
+        section img {
+          flex: 1 0;
+        }
+      }
+
+      /* section {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 0 8rem;
+      }
+
+      section div {
+        flex: 1 0 400px;
+      }
+
+      section img {
+        width: 60%;
+        flex: 1 0 400px;
+      } */
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html" id="active">Home</a></li>
+        <li><a href="#" id="services">Services</a></li>
+        <li><a href="#" id="prints">Prints</a></li>
+        <li><a href="gallery.html" id="gallery">Gallery</a></li>
+        <li>
+          <a href="https://www.instagram.com/" target="_blank" id="insta">
+            Instagram
+          </a>
+        </li>
+        <li><a href="contact.html" id="contact">Contact</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Advanced CSS Website</h1>
+    </header>
+    <main>
+      <section>
+        <img
+          src="images/grid-vs-flexbox.jpg"
+          alt="An image that shows an example of CSS Flexbox and CSS Grid layouts.
+          It also states that CSS Flexbox is best used for one-dimensional layouts,
+          but CSS Grid is best used for multi-dimensional layouts." />
+        <div id="flex-text">
+          <header>
+            <h2>Flex Demo</h2>
+          </header>
+          <p>
+            This website shows the difference between CSS Flexbox and CSS Grid
+            layouts. This home page and the navigation bar on every webpage
+            specifically demonstrate the power of the "display: flex;" CSS
+            property and value as well as some of the related CSS properties to
+            "display: flex;".
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
